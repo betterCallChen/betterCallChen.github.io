@@ -4,7 +4,7 @@
 
 layout: home
 ---
-#INTRODUCTION
+#Welcome
 
 Hi, welcome to "better call chen"!
 
