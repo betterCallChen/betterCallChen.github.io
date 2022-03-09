@@ -5,13 +5,12 @@
 layout: home
 ---
 
-##Welcome
 
 Hi, welcome to "better call chen"!
 
-Some notes in my work will be uploaded to this website.
+Some study notes will be uploaded to this website.
 
-Good luck
+Good luck, have fun!
 >
 
 > 
@@ -19,7 +18,7 @@ Good luck
 >
 
 >
-#
+~~~~~~~~~~
 
 
 
