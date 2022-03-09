@@ -6,12 +6,12 @@ layout: home
 ---
 
 
-<font size=5>Hi, welcome to "better call chen"!
+Hi, welcome to "better call chen"!
 
 Some study notes will be uploaded to this website.
 
 Good luck, have fun!
-</font>
+
 
 .
 
