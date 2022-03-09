@@ -11,14 +11,15 @@ Hi, welcome to "better call chen"!
 Some study notes will be uploaded to this website.
 
 Good luck, have fun!
->
 
-> 
+.
 
->
+.
 
->
-~~~~~~~~~~
+.
+
+.
+
 
 
 
