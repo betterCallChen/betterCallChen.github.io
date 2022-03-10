@@ -8,7 +8,7 @@ permalink: /imaging/CIS_Process_Introduction
 序：记录下CIS的制造工艺（以普通的RGB image sensor为例）方面较基础的笔记。
 公众号“杯拓扩擒”
 
-##1. TO之前
+#1. TO之前
 ###1.1 FSI与BSI
 在设计一款CIS之前，从工艺的角度，最先需要做出选择的可能就是FSI（front-side illumination）还是BSI（back-side illumination）。
  
