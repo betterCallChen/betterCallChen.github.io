@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 
-permalink: /imaging/CIS_Process_Introduction
+permalink: /imaging/cis_process_introduction
 ---
 
 ***<font size=6>Fabrication of CMOS Image Sensor</font>***
