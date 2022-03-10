@@ -44,6 +44,7 @@ Technology Node的选择也是性能成本等的综合考虑，没有特殊原�
 ## 2. TO
 ### 2.1 Short Loop
 一般而言，如果FAB有成熟的CIS产线且能符合要求的话，那就不用谈太多。了解它的process flow，画好版图TO就行了。不过如果需要开发一些单点工序，则需要留够时间和FAB安排相关的short loop实验，小流程跑通了再跑完整的process flow。这种需要和FAB有较多的磨合（钱也要砸进去不少）。具体的项目也不一样，没法统一说要怎么做，只能靠经验去把握了。但是一个重要的原则就是尽可能提前，因为项目delay是一种常态。
+
 ### 2.2 FEOL
 前道工序与传统的CMOS工艺没有太多区别，这也是CIS能够战胜CCD，做到很低成本的一个重要原因。大致的工序包括：（AA/STI工序）>（各种Well implant）> （各种Pixel相关的implant）>（Gate Oxide工序）>（Poly Gate工序）>（OFFSET工序）>（LDD注入）>（SPACER工序）>（源漏注入）>（ESD注入工序）>（Salicide工序）>（CESL工序）>（Pre-metal介质层）
 具体的每道工序以及thermal相关的东西，在各家的Fab以及不同的工艺节点都会有所区别，但基本思路不会有大的变动。
@@ -52,9 +53,11 @@ Technology Node的选择也是性能成本等的综合考虑，没有特殊原�
 - Source Follower部分：Source Follower部分对于CIS的噪声贡献较大，所以通常会想要对SF进行一些优化操作，包括了Fluorine implant，thinner gate oxide等等。DB Hitek有几篇比较好的文章对SF的优化工艺进行了分析说明（参考文献3，4）。
 - 源漏注入：有些logic工艺中，源漏注入会有Ge的掺杂。但是对于Pixel区域，应当避免Ge掺杂，如果有必要，需要有Pixel单独的源漏注入。
 - Salicide部分：Pixel区域是不进行salicide的，因此做道工序时要注意将pixel array全部保护住。
+
 ### 2.3 BEOL
 前道工序完成后，接下来会进行后道工序，即金属布线层。
 这一段没有太多可操作的，Fab的工艺流程都是相对固定的。根据工艺线的不同，现阶段有些是使用的Al工艺，有些使用的是Cu工艺。这些和传统CMOS工艺一致。
+
 ### 2.4 BSI工艺
 如果是FSI，那在BEOL完成后就进行光学模块的制备。不过目前主流还是BSI工艺（包括Stacking），所以在进行光学模块之前，还需要完成BSI工艺。
 BSI工艺包括了如下几个步骤：（翻转后Bonding）>（背面减薄工序）>（DTI工序）>（HK film工序）>（Metal Grid工序）> （开PAD工序）
