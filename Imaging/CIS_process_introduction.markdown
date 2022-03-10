@@ -3,13 +3,14 @@ layout: page
 title: 
 permalink: /imaging/CIS_Process_Introduction
 ---
-#Fabrication of CMOS Image Sensor
+# Fabrication of CMOS Image Sensor
 
+updated @ 0007
 序：记录下CIS的制造工艺（以普通的RGB image sensor为例）方面较基础的笔记。
 公众号“杯拓扩擒”
 
-#1. TO之前
-###1.1 FSI与BSI
+# 1. TO之前
+### 1.1 FSI与BSI
 在设计一款CIS之前，从工艺的角度，最先需要做出选择的可能就是FSI（front-side illumination）还是BSI（back-side illumination）。
  
 (From Sony)
@@ -19,7 +20,7 @@ BSI比较关键的技术点包括wafer的键合技术，背面减薄技术，背
 在BSI技术量产之前，FSI还有一个演进技术，即使用light-pipe技术，也称为light-guide技术。该技术还是基于FSI，在Photodiode的上方的金属布线层中加入高介质材料，利用全反射原理来减小光的损失，如下图示。这条技术路线比较冷门，详细内容以后有机会再整理。
  
 (From EEWEB)
-###1.2 Stacking技术
+### 1.2 Stacking技术
 BSI进一步发展出了stacking技术，即将sensor与logic分别制造在不同的wafer中，这样sensor wafer被bonding在logic wafer上被减薄。stacking的优势在sensor wafer的工艺可以单独优化，不必受限于logic wafer的工艺；而且，能够将整个sensor面积做得更小，或是说同样的面积能够集成更复杂的功能（比如event-based camera，SPAD camera，AI-included sensor等sensor的发展，都很大程度受益于stacking技术）。而stacking技术比较关键的技术点除了BSI的相关技术外，还需要考虑两个wafer之间的电气连接问题。在这一点上，主要有两个解决方案：TSV（硅穿孔技术）以及Cu-Cu direct bonding（有时也叫hybrid bonding）。这一方面要展开的话有较多的内容，在以后的笔记中再详细说明。可以参考2017和2019 IISW里techInsights的综述文章<参考文献1，2>：
  
 (From Sony)
@@ -30,7 +31,7 @@ triple stacking一般是额外加了一个DARM，不过Sony在最新2021 IEDM会
  
 (From Sony)
 就FSI与BSI的选择问题，除了综合产品spec以及成本方面的考虑，FAB相关工艺的成熟度也是很重要的一个考虑。就大陆FAB厂而言，有些FAB虽然有成熟的CIS产线，但不一定支持BSI工艺，而Stacking的工艺要求就更难了。
-###1.3 Technology Node
+### 1.3 Technology Node
 相对logic芯片，CIS对于工艺节点的要求并没有那么高。目前看到的产品，0.13um的工艺都有可能在使用。当然，我们从主流手机使用的CIS来看，sensor wafer主要还是在90nm/65nm/40nm，logic wafer则主要是65nm/40nm等。对于Samsung而言，它有些高端产品在logic wafer上会使用自家的28nm high-k工艺。
  
 (2017 IISW, TechInsights)
