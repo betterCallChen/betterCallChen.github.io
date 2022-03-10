@@ -4,8 +4,8 @@ title:
 permalink: /imaging/CIS_Process_Introduction
 ---
 
-## ***Fabrication of CMOS Image Sensor***
-test @ 0310 Something about imaging technology, mainly about CMOS IMAGE SENSOR (CIS).
+***<font size=5>Fabrication of CMOS Image Sensor</font>***
+
 
 序：记录下CIS的制造工艺（以普通的RGB image sensor为例）方面较基础的笔记。
 
