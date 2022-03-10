@@ -7,7 +7,6 @@ permalink: /imaging/CIS_Process_Introduction
 
 # Fabrication of CMOS Image Sensor
 
-updated @ 0007
 序：记录下CIS的制造工艺（以普通的RGB image sensor为例）方面较基础的笔记。
 公众号“杯拓扩擒”
 
