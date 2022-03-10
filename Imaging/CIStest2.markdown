@@ -1,8 +1,8 @@
 ---
 layout: page
 title: 
-permalink: /imaging/CIStest
+permalink: /imaging/CIStest2
 ---
 
-test Something about imaging technology, mainly about CMOS IMAGE SENSOR (CIS).
+test2 Something about imaging technology, mainly about CMOS IMAGE SENSOR (CIS).
 
