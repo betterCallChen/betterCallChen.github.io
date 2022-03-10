@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 
+title:
 permalink: /imaging/CIS_Process_Introduction
 ---
 # Fabrication of CMOS Image Sensor
