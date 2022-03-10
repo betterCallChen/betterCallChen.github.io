@@ -93,18 +93,18 @@ Metal Grid工序，Metal Grid是在pixel周围的一圈金属，用来降低光�
 ## 4. Reference 
 [1] “A Survey of Enabling Technologies in Successful Consumer Digital Imaging Products”
 
-https://www.imagesensors.org/Past%20Workshops/2017%20Workshop/2017%20Papers/R06.pdf
+<https://www.imagesensors.org/Past%20Workshops/2017%20Workshop/2017%20Papers/R06.pdf>
 
 [2] “The State-of-the-Art of Smartphone Imagers”
 
-https://www.imagesensors.org/Past%20Workshops/2019%20Workshop/2019%20Papers/R01.pdf
+<https://www.imagesensors.org/Past%20Workshops/2019%20Workshop/2019%20Papers/R01.pdf>
 
 [3] “Temporal Noise Improvement Using the Selective Application of the Fluorine Implantation in the CMOS Image Sensor”
 
-https://www.imagesensors.org/Past%20Workshops/2017%20Workshop/2017%20Papers/R09.pdf
+<https://www.imagesensors.org/Past%20Workshops/2017%20Workshop/2017%20Papers/R09.pdf>
 
 [4] “Several Process Techniques & Pixel Source Follower Schemes to improve the Pixel Temporal Noise ”
 
-https://www.imagesensors.org/Past%20Workshops/2019%20Workshop/2019%20Papers/R08.pdf
+<https://www.imagesensors.org/Past%20Workshops/2019%20Workshop/2019%20Papers/R08.pdf>
 
 --END
