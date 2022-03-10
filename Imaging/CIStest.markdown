@@ -4,5 +4,5 @@ title:
 permalink: /imaging/CIStest
 ---
 
-test Something about imaging technology, mainly about CMOS IMAGE SENSOR (CIS).
+test @ 0310 Something about imaging technology, mainly about CMOS IMAGE SENSOR (CIS).
 
