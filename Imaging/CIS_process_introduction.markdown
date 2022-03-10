@@ -51,10 +51,10 @@ Technology Node的选择也是性能成本等的综合考虑，没有特殊原�
 前道工序与传统的CMOS工艺没有太多区别，这也是CIS能够战胜CCD，做到很低成本的一个重要原因。大致的工序包括：（AA/STI工序）>（各种Well implant）> （各种Pixel相关的implant）>（Gate Oxide工序）>（Poly Gate工序）>（OFFSET工序）>（LDD注入）>（SPACER工序）>（源漏注入）>（ESD注入工序）>（Salicide工序）>（CESL工序）>（Pre-metal介质层）
 具体的每道工序以及thermal相关的东西，在各家的Fab以及不同的工艺节点都会有所区别，但基本思路不会有大的变动。
 这里对于CIS而言，主要有几个地方可能需要注意：
-•	Gate-Oxide的厚度：因为Pixel内的读出管通常是使用2.7-3.3V这种电压，与logic电路中的core device不一样，因此一般pixel内是需要用thick gate oxide，可以与IO管一样，也可以根据自己的条件选择合适的thickness（但是会需要额外的工序以及Mask）。
-•	Source Follower部分：Source Follower部分对于CIS的噪声贡献较大，所以通常会想要对SF进行一些优化操作，包括了Fluorine implant，thinner gate oxide等等。DB Hitek有几篇比较好的文章对SF的优化工艺进行了分析说明（参考文献3，4）。
-•	源漏注入：有些logic工艺中，源漏注入会有Ge的掺杂。但是对于Pixel区域，应当避免Ge掺杂，如果有必要，需要有Pixel单独的源漏注入。
-•	Salicide部分：Pixel区域是不进行salicide的，因此做道工序时要注意将pixel array全部保护住。
+- Gate-Oxide的厚度：因为Pixel内的读出管通常是使用2.7-3.3V这种电压，与logic电路中的core device不一样，因此一般pixel内是需要用thick gate oxide，可以与IO管一样，也可以根据自己的条件选择合适的thickness（但是会需要额外的工序以及Mask）。
+- Source Follower部分：Source Follower部分对于CIS的噪声贡献较大，所以通常会想要对SF进行一些优化操作，包括了Fluorine implant，thinner gate oxide等等。DB Hitek有几篇比较好的文章对SF的优化工艺进行了分析说明（参考文献3，4）。
+- 源漏注入：有些logic工艺中，源漏注入会有Ge的掺杂。但是对于Pixel区域，应当避免Ge掺杂，如果有必要，需要有Pixel单独的源漏注入。
+- Salicide部分：Pixel区域是不进行salicide的，因此做道工序时要注意将pixel array全部保护住。
 ### 2.3 BEOL
 前道工序完成后，接下来会进行后道工序，即金属布线层。
 这一段没有太多可操作的，Fab的工艺流程都是相对固定的。根据工艺线的不同，现阶段有些是使用的Al工艺，有些使用的是Cu工艺。这些和传统CMOS工艺一致。
