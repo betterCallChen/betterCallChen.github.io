@@ -9,7 +9,7 @@ updated @ 0007
 序：记录下CIS的制造工艺（以普通的RGB image sensor为例）方面较基础的笔记。
 公众号“杯拓扩擒”
 
-# 1. TO之前
+## 1. TO之前
 ### 1.1 FSI与BSI
 在设计一款CIS之前，从工艺的角度，最先需要做出选择的可能就是FSI（front-side illumination）还是BSI（back-side illumination）。
  
@@ -40,13 +40,13 @@ triple stacking一般是额外加了一个DARM，不过Sony在最新2021 IEDM会
  
 (From Yahoo, Samsung)
 Technology Node的选择也是性能成本等的综合考虑，没有特殊原因一般都跟着主流/竞品走就行了。
-###1.4 Raw wafer
+### 1.4 Raw wafer
 现在主流的CIS wafer都是在用高阻epi wafer，器件制备在高阻epi层（阻值量级为10 Ohm-cm），epi的厚度大概在6um左右（vendor一般会有几个常见厚度供选择，如果要定制厚度，发货周期可能会稍微长一点），而Substrate的阻值会低一点，大概0.05 Ohm-cm这种量级。
 如果需要特殊定制wafer，则主要通过Fab与wafer vendor去谈。
-##2. TO
-###2.1 Short Loop
+## 2. TO
+### 2.1 Short Loop
 一般而言，如果FAB有成熟的CIS产线且能符合要求的话，那就不用谈太多。了解它的process flow，画好版图TO就行了。不过如果需要开发一些单点工序，则需要留够时间和FAB安排相关的short loop实验，小流程跑通了再跑完整的process flow。这种需要和FAB有较多的磨合（钱也要砸进去不少）。具体的项目也不一样，没法统一说要怎么做，只能靠经验去把握了。但是一个重要的原则就是尽可能提前，因为项目delay是一种常态。
-###2.2 FEOL
+### 2.2 FEOL
 前道工序与传统的CMOS工艺没有太多区别，这也是CIS能够战胜CCD，做到很低成本的一个重要原因。大致的工序包括：（AA/STI工序）>（各种Well implant）> （各种Pixel相关的implant）>（Gate Oxide工序）>（Poly Gate工序）>（OFFSET工序）>（LDD注入）>（SPACER工序）>（源漏注入）>（ESD注入工序）>（Salicide工序）>（CESL工序）>（Pre-metal介质层）
 具体的每道工序以及thermal相关的东西，在各家的Fab以及不同的工艺节点都会有所区别，但基本思路不会有大的变动。
 这里对于CIS而言，主要有几个地方可能需要注意：
@@ -54,10 +54,10 @@ Technology Node的选择也是性能成本等的综合考虑，没有特殊原�
 •	Source Follower部分：Source Follower部分对于CIS的噪声贡献较大，所以通常会想要对SF进行一些优化操作，包括了Fluorine implant，thinner gate oxide等等。DB Hitek有几篇比较好的文章对SF的优化工艺进行了分析说明（参考文献3，4）。
 •	源漏注入：有些logic工艺中，源漏注入会有Ge的掺杂。但是对于Pixel区域，应当避免Ge掺杂，如果有必要，需要有Pixel单独的源漏注入。
 •	Salicide部分：Pixel区域是不进行salicide的，因此做道工序时要注意将pixel array全部保护住。
-###2.3 BEOL
+### 2.3 BEOL
 前道工序完成后，接下来会进行后道工序，即金属布线层。
 这一段没有太多可操作的，Fab的工艺流程都是相对固定的。根据工艺线的不同，现阶段有些是使用的Al工艺，有些使用的是Cu工艺。这些和传统CMOS工艺一致。
-###2.4 BSI工艺
+### 2.4 BSI工艺
 如果是FSI，那在BEOL完成后就进行光学模块的制备。不过目前主流还是BSI工艺（包括Stacking），所以在进行光学模块之前，还需要完成BSI工艺。
 BSI工艺包括了如下几个步骤：（翻转后Bonding）>（背面减薄工序）>（DTI工序）>（HK film工序）>（Metal Grid工序）> （开PAD工序）
 翻转后bonding一般是利用两片wafer均长一层薄薄的oxide，然后通过oxide bonding到一块。不过现在更先进的Cu-Cu direct bonding技术（也叫hybrid bonding技术），工序会有区别，这点以后再详细分析。
@@ -74,10 +74,10 @@ Metal Grid工序，Metal Grid是在pixel周围的一圈金属，用来降低光�
 开PAD工序，在完成前面的所有工序并实现平坦化后，需要将芯片的PAD露出来。这部分工序是首先将PAD处的silicon完全刻蚀掉，然后将介质层刻蚀掉，这样可以露出BEOL中的Metal层。理论上M1暴露出来即可，不过有些FAB也会选择将Top metal暴露。接下来淀积Al并图形化刻蚀，只保留PAD附近的Al即可。这部分Al通过前面暴露出来的BEOL中的metal层直接接触，实现电气连接。后面可以考虑再加一层oxide将芯片都保护住，只留PAD这一小部分开口用于后续封装。开PAD这部分工序有一些细节需要注意，比如曝光的控制，比如PAD与silicon之间的电气隔离等，这里的工序出问题会直接导致芯片彻底废掉，完全测不到东西，所以需要特别小心。
  
 (From Brillnics 2020 paper, doi.org/10.3390/s20020486, open access)
-##3. 光学模块工艺
+## 3. 光学模块工艺
 光学模块这部分主要是color filter和micro lens的制备，这一部分并不是由image sensor的fab做的，而是拿到外面其它厂商去做（比如大陆的TSES以及台湾的VisEra，虽然它们分别与SMIC和TSMC有很深的关系，但是它们也是对外接其它FAB的单子的）。从工艺的角度这一块没有太多可说的，一般照着fab的工序做就是了，只是需要提供它们一些MASK信息，以及一些设计参数。目前主流的color filter还是RGB的Bayer阵列以及它的一些变形衍生，比如quad-bayer，nonacell，RYYB等技术。后续再有机会详细记录下这一块的工艺步骤以及前研的研究。
 做完光学模块，基本就okay了。后续的切割，封装，测试等就是另一大块领域了，以后接触学习了解更多了再总结。
-##4. Reference 
+## 4. Reference 
 [1] “A Survey of Enabling Technologies in Successful Consumer Digital Imaging Products”
 https://www.imagesensors.org/Past%20Workshops/2017%20Workshop/2017%20Papers/R06.pdf
 
