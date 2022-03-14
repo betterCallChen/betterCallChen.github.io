@@ -14,37 +14,42 @@ permalink: /imaging/cis_process_introduction
 在设计一款CIS之前，从工艺的角度，最先需要做出选择的可能就是FSI（front-side illumination）还是BSI（back-side illumination）。
 
 ![Aaron Swartz](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data0/BSI_FSI.png)
-
 (From Sony)
 
 FSI和基础的CMOS logic工艺一样，首先完成前道工艺（FEOL，front-end-of-line），然后做后道工艺（BEOL，back-end-of-line），最后在表面做光学模块（color filter以及micro-lens）。FSI的一个主要问题在于光进入到silicon之前需要穿过较厚的金属布线层，这导致了较多的光子损失，影响了最终的量子效率（QE，quantum efficiency）。特别是像素不断缩小，有效的感光面积占整个pixel的区域变得更加有限。
 BSI即是为了解决这个问题而发明，BSI在完成BEOL之后，会将sensor wafer（wafer #A）翻转过来，然后将其bonding到另一个wafer（wafer #B，carrier wafer）上，从背面开始将wafer #A减薄，直到wafer #A只剩下器件需要的厚度（比如3um左右）。然后再在表面去做color filter和micro-lens。这样，在BSI工艺中，光从背面可以直接入射到silicon中，而不需要经过金属布线层，因此对于小像素而言，其QE能得到较大提升。
 BSI比较关键的技术点包括wafer的键合技术，背面减薄技术，背面PAD技术（BSI工艺细节时再讲）。
 在BSI技术量产之前，FSI还有一个演进技术，即使用light-pipe技术，也称为light-guide技术。该技术还是基于FSI，在Photodiode的上方的金属布线层中加入高介质材料，利用全反射原理来减小光的损失，如下图示。这条技术路线比较冷门，详细内容以后有机会再整理。
- 
+
+![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/FSI_LightGuide.png?raw=true)
 (From EEWEB)
+
 ### 1.2 Stacking技术
 BSI进一步发展出了stacking技术，即将sensor与logic分别制造在不同的wafer中，这样sensor wafer被bonding在logic wafer上被减薄。stacking的优势在sensor wafer的工艺可以单独优化，不必受限于logic wafer的工艺；而且，能够将整个sensor面积做得更小，或是说同样的面积能够集成更复杂的功能（比如event-based camera，SPAD camera，AI-included sensor等sensor的发展，都很大程度受益于stacking技术）。而stacking技术比较关键的技术点除了BSI的相关技术外，还需要考虑两个wafer之间的电气连接问题。在这一点上，主要有两个解决方案：TSV（硅穿孔技术）以及Cu-Cu direct bonding（有时也叫hybrid bonding）。这一方面要展开的话有较多的内容，在以后的笔记中再详细说明。可以参考2017和2019 IISW里techInsights的综述文章<参考文献1，2>：
- 
+
+![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/TSV_HybridBonding.png?raw=true)
 (From Sony)
 
 在Stacking上进一步发展，可以由传统的double-stacking演变成triple stacking。这个目前量产产品有在Sony和Samsung见到过。
- 
+
+![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/TripleStacking.png?raw=true)
 (From Sony)
 
 triple stacking一般是额外加了一个DARM，不过Sony在最新2021 IEDM会议上还提出了一种新的triple-stacking方式，即将pixel section单独再拆成两个wafer。
- 
+
+![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/TwoLayerPD.png?raw=true)
 (From Sony)
 
 就FSI与BSI的选择问题，除了综合产品spec以及成本方面的考虑，FAB相关工艺的成熟度也是很重要的一个考虑。就大陆FAB厂而言，有些FAB虽然有成熟的CIS产线，但不一定支持BSI工艺，而Stacking的工艺要求就更难了。
 ### 1.3 Technology Node
 相对logic芯片，CIS对于工艺节点的要求并没有那么高。目前看到的产品，0.13um的工艺都有可能在使用。当然，我们从主流手机使用的CIS来看，sensor wafer主要还是在90nm/65nm/40nm，logic wafer则主要是65nm/40nm等。对于Samsung而言，它有些高端产品在logic wafer上会使用自家的28nm high-k工艺。
- 
+
+![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/TechNodes.png?raw=true)
 (2017 IISW, TechInsights)
 
 虽然CIS对于工艺节点的推进没有很激进，但也能看到最新的趋势是logic wafer朝28nm推进（集成更多功能，更低功耗等优势），Sony，TSMC以及Samsung是在这方面走在比较前面的。更激进的技术也有在这些大厂的ppt中提及，但相对没那么成熟，客户的需求度可能也没那么高。对于手机上使用的CIS，其像素尺寸小，面阵大，对工艺节点要求会略高一些。
 根据最新的消息，Sony和TSMC的深度合作，在工艺结点上有进一步push，甚至在sensor wafer也将使用更高级的节点。Samsung则在2019 IEDM上有发表使用FinFET在CIS中，在2021年的roadmap中也提到相关展望。
- 
+![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/TSMCSonySamsung.png?raw=true)
 (From Yahoo, Samsung)
 
 Technology Node的选择也是性能成本等的综合考虑，没有特殊原因一般都跟着主流/竞品走就行了。
@@ -73,20 +78,24 @@ Technology Node的选择也是性能成本等的综合考虑，没有特殊原�
 BSI工艺包括了如下几个步骤：（翻转后Bonding）>（背面减薄工序）>（DTI工序）>（HK film工序）>（Metal Grid工序）> （开PAD工序）
 翻转后bonding一般是利用两片wafer均长一层薄薄的oxide，然后通过oxide bonding到一块。不过现在更先进的Cu-Cu direct bonding技术（也叫hybrid bonding技术），工序会有区别，这点以后再详细分析。
 背面减薄工序一般是利用grinding进行快速研磨减薄（不需要高精度的控制，将wafer从初始的750um左右厚减薄到几十um厚左右），然后利用wet etchant（比如HNA）进行湿法刻蚀减薄（这一步通常会利用wafer的epi与substrate之间的浓度差实现高的选择比，从而精确地将substrate全部去除，而留下epi部分）。之后可能还会进行一些CMP操作以及湿法刻蚀来进一步细调处理。
- 
+
+![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/BSIProcess.png?raw=true)
 (From Google Search)
 
 DTI是指deep trench isolation，这个工序不是必须的，但对于小像素sensor的像素间隔离十分重要。理想情况就是将pixel之间完全隔离（光学隔离&电学隔离），但考虑实际工艺情况以及成本，比如trench的深宽比，trench的填充问题，trench侧壁的passivation等等问题，普通的DTI通常并没有将silicon刻穿，DTI的内部填充则主要由silicon oxide填充实现。DTI的实际工艺会有更多种选择，也在以后的笔记中再详细分析。
 HK film在有些描述中也叫AR coating，即Anti-reflection coating。通常由AlO/HfO，TaO等材料实现的薄膜（总共几十nm厚左右）。除了在光学层面有抗反射的作用，在电学上，还能提供负电荷，起到对背面（经历了背面减薄）以及DTI侧壁（经历了深槽刻蚀）的保护，降低暗电流。注意DTI的里面也要铺一层HK film，所以这道工序是在DTI的填充之前进行。
- 
+
+![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/BSI_SEM.png?raw=true)
 (From 2015 IISW, TechInsights)
 
 Metal Grid工序，Metal Grid是在pixel周围的一圈金属，用来降低光学上的crosstalk，通常用W材料来做metal grid。不过最新的技术是使用composite (metal + oxide) grid，甚至是metal-free grid。
- 
+
+![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/DTI_CFA_uLens.png?raw=true)
 (From OV 2018 paper, doi:10.3390/s18020667, open access)
 
 开PAD工序，在完成前面的所有工序并实现平坦化后，需要将芯片的PAD露出来。这部分工序是首先将PAD处的silicon完全刻蚀掉，然后将介质层刻蚀掉，这样可以露出BEOL中的Metal层。理论上M1暴露出来即可，不过有些FAB也会选择将Top metal暴露。接下来淀积Al并图形化刻蚀，只保留PAD附近的Al即可。这部分Al通过前面暴露出来的BEOL中的metal层直接接触，实现电气连接。后面可以考虑再加一层oxide将芯片都保护住，只留PAD这一小部分开口用于后续封装。开PAD这部分工序有一些细节需要注意，比如曝光的控制，比如PAD与silicon之间的电气隔离等，这里的工序出问题会直接导致芯片彻底废掉，完全测不到东西，所以需要特别小心。
- 
+
+![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/PadOpen.png?raw=true)
 (From Brillnics 2020 paper, doi.org/10.3390/s20020486, open access)
 
 ## 3. 光学模块工艺
