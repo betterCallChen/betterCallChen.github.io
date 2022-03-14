@@ -56,7 +56,8 @@ triple stacking一般是额外加了一个DARM，不过Sony在最新2021 IEDM会
 虽然CIS对于工艺节点的推进没有很激进，但也能看到最新的趋势是logic wafer朝28nm推进（集成更多功能，更低功耗等优势），Sony，TSMC以及Samsung是在这方面走在比较前面的。更激进的技术也有在这些大厂的ppt中提及，但相对没那么成熟，客户的需求度可能也没那么高。对于手机上使用的CIS，其像素尺寸小，面阵大，对工艺节点要求会略高一些。
 根据最新的消息，Sony和TSMC的深度合作，在工艺结点上有进一步push，甚至在sensor wafer也将使用更高级的节点。Samsung则在2019 IEDM上有发表使用FinFET在CIS中，在2021年的roadmap中也提到相关展望。
 ![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/TSMCSonySamsung.png?raw=true)
-(From Yahoo, Samsung)
+
+<center>(From Yahoo, Samsung)</center>
 
 Technology Node的选择也是性能成本等的综合考虑，没有特殊原因一般都跟着主流/竞品走就行了。
 ### 1.4 Raw wafer
@@ -86,23 +87,27 @@ BSI工艺包括了如下几个步骤：（翻转后Bonding）>（背面减薄工
 背面减薄工序一般是利用grinding进行快速研磨减薄（不需要高精度的控制，将wafer从初始的750um左右厚减薄到几十um厚左右），然后利用wet etchant（比如HNA）进行湿法刻蚀减薄（这一步通常会利用wafer的epi与substrate之间的浓度差实现高的选择比，从而精确地将substrate全部去除，而留下epi部分）。之后可能还会进行一些CMP操作以及湿法刻蚀来进一步细调处理。
 
 ![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/BSIProcess.png?raw=true)
-(From Google Search)
+
+<center>(From Google Search)</center>
 
 DTI是指deep trench isolation，这个工序不是必须的，但对于小像素sensor的像素间隔离十分重要。理想情况就是将pixel之间完全隔离（光学隔离&电学隔离），但考虑实际工艺情况以及成本，比如trench的深宽比，trench的填充问题，trench侧壁的passivation等等问题，普通的DTI通常并没有将silicon刻穿，DTI的内部填充则主要由silicon oxide填充实现。DTI的实际工艺会有更多种选择，也在以后的笔记中再详细分析。
 HK film在有些描述中也叫AR coating，即Anti-reflection coating。通常由AlO/HfO，TaO等材料实现的薄膜（总共几十nm厚左右）。除了在光学层面有抗反射的作用，在电学上，还能提供负电荷，起到对背面（经历了背面减薄）以及DTI侧壁（经历了深槽刻蚀）的保护，降低暗电流。注意DTI的里面也要铺一层HK film，所以这道工序是在DTI的填充之前进行。
 
 ![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/BSI_SEM.png?raw=true)
-(From 2015 IISW, TechInsights)
+
+<center>(From 2015 IISW, TechInsights)</center>
 
 Metal Grid工序，Metal Grid是在pixel周围的一圈金属，用来降低光学上的crosstalk，通常用W材料来做metal grid。不过最新的技术是使用composite (metal + oxide) grid，甚至是metal-free grid。
 
 ![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/DTI_CFA_uLens.png?raw=true)
-(From OV 2018 paper, doi:10.3390/s18020667, open access)
+
+<center>(From OV 2018 paper, doi:10.3390/s18020667, open access)</center>
 
 开PAD工序，在完成前面的所有工序并实现平坦化后，需要将芯片的PAD露出来。这部分工序是首先将PAD处的silicon完全刻蚀掉，然后将介质层刻蚀掉，这样可以露出BEOL中的Metal层。理论上M1暴露出来即可，不过有些FAB也会选择将Top metal暴露。接下来淀积Al并图形化刻蚀，只保留PAD附近的Al即可。这部分Al通过前面暴露出来的BEOL中的metal层直接接触，实现电气连接。后面可以考虑再加一层oxide将芯片都保护住，只留PAD这一小部分开口用于后续封装。开PAD这部分工序有一些细节需要注意，比如曝光的控制，比如PAD与silicon之间的电气隔离等，这里的工序出问题会直接导致芯片彻底废掉，完全测不到东西，所以需要特别小心。
 
 ![Aaron Swartz](https://github.com/betterCallChen/imageData/blob/main/Figures/data0/PadOpen.png?raw=true)
-(From Brillnics 2020 paper, doi.org/10.3390/s20020486, open access)
+
+<center>(From Brillnics 2020 paper, doi.org/10.3390/s20020486, open access)</center>
 
 ## 3. 光学模块工艺
 光学模块这部分主要是color filter和micro lens的制备，这一部分并不是由image sensor的fab做的，而是拿到外面其它厂商去做（比如大陆的TSES以及台湾的VisEra，虽然它们分别与SMIC和TSMC有很深的关系，但是它们也是对外接其它FAB的单子的）。从工艺的角度这一块没有太多可说的，一般照着fab的工序做就是了，只是需要提供它们一些MASK信息，以及一些设计参数。目前主流的color filter还是RGB的Bayer阵列以及它的一些变形衍生，比如quad-bayer，nonacell，RYYB等技术。后续再有机会详细记录下这一块的工艺步骤以及前研的研究。
