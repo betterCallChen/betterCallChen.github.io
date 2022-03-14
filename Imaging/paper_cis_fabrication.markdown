@@ -12,8 +12,11 @@ permalink: /imaging/cis_process_introduction
 ## 1. TO之前
 ### 1.1 FSI与BSI
 在设计一款CIS之前，从工艺的角度，最先需要做出选择的可能就是FSI（front-side illumination）还是BSI（back-side illumination）。
- 
+
+![Aaron Swartz](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data0/BSI_FSI.png)
+
 (From Sony)
+
 FSI和基础的CMOS logic工艺一样，首先完成前道工艺（FEOL，front-end-of-line），然后做后道工艺（BEOL，back-end-of-line），最后在表面做光学模块（color filter以及micro-lens）。FSI的一个主要问题在于光进入到silicon之前需要穿过较厚的金属布线层，这导致了较多的光子损失，影响了最终的量子效率（QE，quantum efficiency）。特别是像素不断缩小，有效的感光面积占整个pixel的区域变得更加有限。
 BSI即是为了解决这个问题而发明，BSI在完成BEOL之后，会将sensor wafer（wafer #A）翻转过来，然后将其bonding到另一个wafer（wafer #B，carrier wafer）上，从背面开始将wafer #A减薄，直到wafer #A只剩下器件需要的厚度（比如3um左右）。然后再在表面去做color filter和micro-lens。这样，在BSI工艺中，光从背面可以直接入射到silicon中，而不需要经过金属布线层，因此对于小像素而言，其QE能得到较大提升。
 BSI比较关键的技术点包括wafer的键合技术，背面减薄技术，背面PAD技术（BSI工艺细节时再讲）。
