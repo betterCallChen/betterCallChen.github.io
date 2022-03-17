@@ -115,21 +115,5 @@ Metal Grid工序，Metal Grid是在pixel周围的一圈金属，用来降低光�
 做完光学模块，基本就okay了。后续的切割，封装，测试等就是另一大块领域了，以后接触学习了解更多了再总结。
 
 ## 4. Reference 
-<1> [“A Survey of Enabling Technologies in Successful Consumer Digital Imaging Products”][ref1]
-
-[ref1]:https://www.imagesensors.org/Past%20Workshops/2017%20Workshop/2017%20Papers/R06.pdf
-
-<2> [“The State-of-the-Art of Smartphone Imagers”][ref2]
-
-[ref2]:https://www.imagesensors.org/Past%20Workshops/2019%20Workshop/2019%20Papers/R01.pdf
-
-<3> [“Temporal Noise Improvement Using the Selective Application of the Fluorine Implantation in the CMOS Image Sensor”][ref3]
-
-[ref3]:https://www.imagesensors.org/Past%20Workshops/2017%20Workshop/2017%20Papers/R09.pdf
-
-<4> [“Several Process Techniques & Pixel Source Follower Schemes to improve the Pixel Temporal Noise“][ref4]
-
-[ref4]:https://www.imagesensors.org/Past%20Workshops/2019%20Workshop/2019%20Papers/R08.pdf
-
 
 --END
