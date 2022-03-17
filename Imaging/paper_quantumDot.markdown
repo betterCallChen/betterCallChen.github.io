@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 
-permalink: /imaging/quantum_dot_for_swir
+permalink: /imaging/quantum_dot_for_swir_imaging
 ---
 
 ***<font size=6>Quantum Dot for SWIR Imaging</font>***
