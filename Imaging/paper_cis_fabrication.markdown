@@ -114,18 +114,5 @@ Metal Grid工序，Metal Grid是在pixel周围的一圈金属，用来降低光�
 光学模块这部分主要是color filter和micro lens的制备，这一部分并不是由image sensor的fab做的，而是拿到外面其它厂商去做（比如大陆的TSES以及台湾的VisEra，虽然它们分别与SMIC和TSMC有很深的关系，但是它们也是对外接其它FAB的单子的）。从工艺的角度这一块没有太多可说的，一般照着fab的工序做就是了，只是需要提供它们一些MASK信息，以及一些设计参数。目前主流的color filter还是RGB的Bayer阵列以及它的一些变形衍生，比如quad-bayer，nonacell，RYYB等技术。后续再有机会详细记录下这一块的工艺步骤以及前研的研究。
 做完光学模块，基本就okay了。后续的切割，封装，测试等就是另一大块领域了，以后接触学习了解更多了再总结。
 
-## 4. Reference 
-<1> [“A Survey of Enabling Technologies in Successful Consumer Digital Imaging Products”][ref1]
-
-<2> [“The State-of-the-Art of Smartphone Imagers”][ref2]
-
-<3> [“Temporal Noise Improvement Using the Selective Application of the Fluorine Implantation in the CMOS Image Sensor”][ref3]
-
-<4> [“Several Process Techniques & Pixel Source Follower Schemes to improve the Pixel Temporal Noise“][ref4]
-
-[ref1]:https://www.imagesensors.org/Past%20Workshops/2017%20Workshop/2017%20Papers/R06.pdf
-[ref2]:https://www.imagesensors.org/Past%20Workshops/2019%20Workshop/2019%20Papers/R01.pdf
-[ref3]:https://www.imagesensors.org/Past%20Workshops/2017%20Workshop/2017%20Papers/R09.pdf
-[ref4]:https://www.imagesensors.org/Past%20Workshops/2019%20Workshop/2019%20Papers/R08.pdf
 
 --END
