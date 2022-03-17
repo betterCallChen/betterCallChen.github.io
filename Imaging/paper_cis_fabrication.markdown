@@ -13,6 +13,7 @@ permalink: /imaging/cis_process_introduction
 ### 1.1 FSI与BSI
 在设计一款CIS之前，从工艺的角度，最先需要做出选择的可能就是FSI（front-side illumination）还是BSI（back-side illumination）。
 
+
 ![Aaron Swartz](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data0/BSI_FSI.png)
 
 <center>(From Sony)</center>
