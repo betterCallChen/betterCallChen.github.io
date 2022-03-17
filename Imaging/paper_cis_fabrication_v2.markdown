@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 
-permalink: /imaging/cis_process_introduction_v2
+permalink: /imaging/cis_process_introductionk
 ---
 
-***<font size=6>Fabrication of CMOS Image Sensor</font>***
+***<font size=6>Fabrication of CMOS Image SensorS</font>***
 
 
 序：记录下CIS的制造工艺（以普通的RGB image sensor为例）方面较基础的笔记。
