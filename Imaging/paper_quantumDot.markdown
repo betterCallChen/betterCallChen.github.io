@@ -21,7 +21,7 @@ https://light.utoronto.ca/wp-content/uploads/2021/08/eaaz8541.full_.pdf
 
 在将QD image sensor产品化的道路上走得比较好的且知名的企业和机构主要有IMEC和意法半导体（ST）。当然还有很多小的创业型企业，不过我个人没有了解到特别出彩的商用产品，也没看到重要会议上的论文，所以暂时就不考虑了。
 
-##ST Microelectronics
+## ST Microelectronics
 2021年的IEDM上，意法半导体（ST）发表了相关论文<1.62um Global Shutter Quantum Dot Image Sensor Optimized for Near and Shortwave Infrared>，（论文需要大家自己搞定了，论文部分图示可以在IEDM上看到，ST的官网上也能看到一些内容，另外，作者还在另一个会上发表了文章，说的是同一个事，只是没IEDM文章这么详细全面，可参考High Resolution Quantum Dot Global Shutter Imagers，谷粉学术可下）
 https://www.ieee-iedm.org/press-kit
 https://blog.st.com/iedm-2021/
@@ -42,7 +42,7 @@ https://www.imveurope.com/news/sts-quantum-dot-sensor-set-volume-swir-imaging
 关于ST做QD image sensor这件事，前几年都没看见相关的论文，好像突然就搞起来了，然后突然就要量产了。不过这次IEDM的文章的作者倒是有多年的QD研究经验，像是初创公司创始人进入ST负责了这个事。另外，有报道表示ST与Nanoco有长期合作来获得QD材料。
 https://uk.investing.com/analysis/nanoco-group-making-good-sense-200492932
 
-##IMEC
+## IMEC
 其实在ST之前，IMEC在更多的大会上发表过关于QD Image Sensor的研究文章，不过可能IMEC还是更偏研究所性质，其产业化没有ST的动作那么快。IMEC于2021年IISW以及2020年IEDM上的都有关于QD image sensor的文章发表：
 <Detailed Characterization of SWIR-sensitive Colloidal Quantum Dot Image Sensors>
 (https://imagesensors.org/Past%20Workshops/2021%20Workshop/2021%20Papers/R40.pdf)
@@ -56,10 +56,11 @@ https://uk.investing.com/analysis/nanoco-group-making-good-sense-200492932
 从IEMC的文章可以看出其大致思路和ST的是一致的，都是用PbS QD来实现NIR/SWIR感光，甚至pixel bottom electrode以及公共的top electrode这些特性都一样，pixel pitch也push到了1.82um左右。不过可以发现2021年和2020年是两代不同的产品，其1440nm的QE从原来的13%提升到了40%+。具体的两代产品的迭代可以参考文章<Thin-Film Photodetector Optimization for High-Performance Short-Wavelength Infrared Imaging>(自己想办法)，主要思路是将原来的纯p-type QD升级成p-type QD + n-type QD，这样将耗尽层扩宽，能够有效收集的区域更大了。
 更早（大概2017年）的时候，IMEC就开始做QD image sensor了，pixel pitch很大，20um-40um左右，并且还是在3cm x 3cm的玻璃上先做好，然后transfer，一种纯实验室的做法。然后不断迭代才有了2021 IISW中我们所看到的demo样片。（相比于ST，IMEC发表的论文较多，并且有一定的连贯性，可以看到更多的细节）这其中有一个有意思的技术路线，即将QD通过litho实现pixel化（现在看到的pixel都是通过bottom electrode来实现）。IMEC有成功尝试过，不过在最新的demo中又没有使用这个技术。这一点ST也没有做到，可能在材料工程方面还需要进一步研究。
 
-##未来
+## 未来
 ST表示会在2022年开始产业化QD image sensor，让我们拭目以待。
 IMEC的研究人员提出了QD image sensor继续发展的一些挑战，比如实现“无铅”材料的QD，从而让更多玩家能接受这种QD器件；比如实现one-step QD的淀积，而不是现在的layer-by-layer的淀积方式；以及可靠性的问题等等。
 https://www.imveurope.com/analysis-opinion/quantum-dots-spark-new-swir-wave
 关于SWIR成像的应用市场问题，不少人认为这个市场还是特别小众，更多的是在工业/农业检测领域。在消费级产品或是监控上，是否能实现夜视功能，恶劣环境成像，甚至是用于智能驾驶等等，这都有待进一步的市场验证。
+
 
 --END
