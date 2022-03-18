@@ -9,7 +9,6 @@ categories: jekyll update
 2022/03/10: upload an article "[Fabrication of CMOS Image Sensor][Fabrication of CMOS Image Sensor-docs]"
 
 2022/03/09: start this new site.
-- [Quantum Dot for SWIR Imaging][Quantum Dot for SWIR Imaging] *(at 20220318)*
 
 [Quantum Dot for SWIR Imaging]: https://bettercallchen.github.io/imaging/quantum_dot_for_swir_imaging
 [Fabrication of CMOS Image Sensor-docs]: https://bettercallchen.github.io/imaging/cis_process_introduction
