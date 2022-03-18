@@ -56,12 +56,12 @@ https://uk.investing.com/analysis/nanoco-group-making-good-sense-200492932
 从IEMC的文章可以看出其大致思路和ST的是一致的，都是用PbS QD来实现NIR/SWIR感光，甚至pixel bottom electrode以及公共的top electrode这些特性都一样，pixel pitch也push到了1.82um左右。不过可以发现2021年和2020年是两代不同的产品，其1440nm的QE从原来的13%提升到了40%+。具体的两代产品的迭代可以参考文章<Thin-Film Photodetector Optimization for High-Performance Short-Wavelength Infrared Imaging>(自己想办法)，主要思路是将原来的纯p-type QD升级成p-type QD + n-type QD，这样将耗尽层扩宽，能够有效收集的区域更大了。
 更早（大概2017年）的时候，IMEC就开始做QD image sensor了，pixel pitch很大，20um-40um左右，并且还是在3cm x 3cm的玻璃上先做好，然后transfer，一种纯实验室的做法。然后不断迭代才有了2021 IISW中我们所看到的demo样片。（相比于ST，IMEC发表的论文较多，并且有一定的连贯性，可以看到更多的细节）这其中有一个有意思的技术路线，即将QD通过litho实现pixel化（现在看到的pixel都是通过bottom electrode来实现）。IMEC有成功尝试过，不过在最新的demo中又没有使用这个技术。这一点ST也没有做到，可能在材料工程方面还需要进一步研究。
 
-
-## Future
+## 未来
 ST表示会在2022年开始产业化QD image sensor，让我们拭目以待。
 IMEC的研究人员提出了QD image sensor继续发展的一些挑战，比如实现“无铅”材料的QD，从而让更多玩家能接受这种QD器件；比如实现one-step QD的淀积，而不是现在的layer-by-layer的淀积方式；以及可靠性的问题等等。
 https://www.imveurope.com/analysis-opinion/quantum-dots-spark-new-swir-wave
 关于SWIR成像的应用市场问题，不少人认为这个市场还是特别小众，更多的是在工业/农业检测领域。在消费级产品或是监控上，是否能实现夜视功能，恶劣环境成像，甚至是用于智能驾驶等等，这都有待进一步的市场验证。
+
 
 
 --END
