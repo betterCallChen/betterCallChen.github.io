@@ -48,7 +48,6 @@ https://uk.investing.com/analysis/nanoco-group-making-good-sense-200492932
 (https://imagesensors.org/Past%20Workshops/2021%20Workshop/2021%20Papers/R40.pdf)
 
 <Imaging in Short-Wave Infrared with 1.82 μm Pixel Pitch Quantum Dot Image Sensor>
-(谷粉学术可下)
 
 ![IMEC_quantumDot](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data1/IMEC_quantumDot.png)
 
