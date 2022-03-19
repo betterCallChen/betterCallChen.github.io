@@ -58,7 +58,9 @@ https://uk.investing.com/analysis/nanoco-group-making-good-sense-200492932
 ## 未来
 ST表示会在2022年开始产业化QD image sensor，让我们拭目以待。
 IMEC的研究人员提出了QD image sensor继续发展的一些挑战，比如实现“无铅”材料的QD，从而让更多玩家能接受这种QD器件；比如实现one-step QD的淀积，而不是现在的layer-by-layer的淀积方式；以及可靠性的问题等等。
+
 https://www.imveurope.com/analysis-opinion/quantum-dots-spark-new-swir-wave
+
 关于SWIR成像的应用市场问题，不少人认为这个市场还是特别小众，更多的是在工业/农业检测领域。在消费级产品或是监控上，是否能实现夜视功能，恶劣环境成像，甚至是用于智能驾驶等等，这都有待进一步的市场验证。
 
 
