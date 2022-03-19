@@ -54,12 +54,12 @@ https://www.espros.com/downloads/09_Application_notes/AN02_Optical_Power_Calcula
 ![Epixel](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data2/Epixel.png)
 
 包括了以下几个基本项：
-•	物体接受到的光照功率密度（单位W/m2）：在Part #1中已经计算出来；
-•	物体的反射率（无量纳）：不同的物体反射率变化很大，需要去网上查找相关数据；
-•	物体朗伯反射被sensor接收到的效率（无量纲）：几何光学方面的计算问题，这里面涉及朗伯反射，即我们常说的漫反射，需要计算漫反射中有多少能量会被sensor所收集；
-•	pixel所对应在物体上的面积（单位m2）：几何光学计算问题，这里结合了sensor镜头的FOV，sensor阵列的行数与列数，拍摄物体的距离等信息进行计算；
-•	pixel的面积：（单位m2）：通过sensor的datasheet得知；
-•	sensor的LENS的透光效率（无量纲）：可以通过模组相关的datasheet找到该参数；
+- 物体接受到的光照功率密度（单位W/m2）：在Part #1中已经计算出来；
+- 物体的反射率（无量纳）：不同的物体反射率变化很大，需要去网上查找相关数据；
+- 物体朗伯反射被sensor接收到的效率（无量纲）：几何光学方面的计算问题，这里面涉及朗伯反射，即我们常说的漫反射，需要计算漫反射中有多少能量会被sensor所收集；
+- pixel所对应在物体上的面积（单位m2）：几何光学计算问题，这里结合了sensor镜头的FOV，sensor阵列的行数与列数，拍摄物体的距离等信息进行计算；
+- pixel的面积：（单位m2）：通过sensor的datasheet得知；
+- sensor的LENS的透光效率（无量纲）：可以通过模组相关的datasheet找到该参数；
 
 
 同样的，可以结合excel文件了解更详细的求解过程：
