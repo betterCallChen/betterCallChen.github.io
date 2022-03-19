@@ -49,6 +49,7 @@ https://uk.investing.com/analysis/nanoco-group-making-good-sense-200492932
 
 <Imaging in Short-Wave Infrared with 1.82 μm Pixel Pitch Quantum Dot Image Sensor>
 
+
 ![IMEC_quantumDot](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data1/IMEC_quantumDot.png)
 
 从IEMC的文章可以看出其大致思路和ST的是一致的，都是用PbS QD来实现NIR/SWIR感光，甚至pixel bottom electrode以及公共的top electrode这些特性都一样，pixel pitch也push到了1.82um左右。不过可以发现2021年和2020年是两代不同的产品，其1440nm的QE从原来的13%提升到了40%+。具体的两代产品的迭代可以参考文章<Thin-Film Photodetector Optimization for High-Performance Short-Wavelength Infrared Imaging>(自己想办法)，主要思路是将原来的纯p-type QD升级成p-type QD + n-type QD，这样将耗尽层扩宽，能够有效收集的区域更大了。
