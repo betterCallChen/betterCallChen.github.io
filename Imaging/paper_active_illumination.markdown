@@ -27,7 +27,7 @@ https://www.espros.com/downloads/09_Application_notes/AN02_Optical_Power_Calcula
 
 整个计算包括了两个主要部分，即“物体接受到的光照功率密度”以及“sensor接受到的反射光照功率密度”。
 
----
+***
 
 ## Part #1 “物体接受到的光照功率密度”
 
@@ -45,7 +45,7 @@ https://www.espros.com/downloads/09_Application_notes/AN02_Optical_Power_Calcula
 
 ![Eeo_table](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data2/Eeo_table.png)
 
----
+***
 
 ## Part #2 “sensor接受到的反射光照功率密度”
 
@@ -65,6 +65,8 @@ https://www.espros.com/downloads/09_Application_notes/AN02_Optical_Power_Calcula
 同样的，可以结合excel文件了解更详细的求解过程：
 
 ![Epixel_table](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data2/Epixel_table.png)
+
+***
 
 依靠这个简单的系统模型，在系统参数的确定下可以推算单位时间内有多少光子能够被pixel所接收，从而确定合适的曝光时间。也可以在明确spec的情况下，对模组相关部件进行确定选型。
 （excel文件里还有不少关于TOF的干货，有兴趣可以进一步学习）
