@@ -27,9 +27,9 @@ https://www.espros.com/downloads/09_Application_notes/AN02_Optical_Power_Calcula
 
 整个计算包括了两个主要部分，即“物体接受到的光照功率密度”以及“sensor接受到的反射光照功率密度”。
 
-## Part #1“物体接受到的光照功率密度”由如下公式进行计算，
+---
 
-![Eeo](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data2/Eeo.png)
+## Part #1“物体接受到的光照功率密度”由如下公式进行计算，
 
 包括了四个基本项：
 - 光源的辐射密度（单位W/sr）:可以结合光源（LED或者VCSEL）的datasheet查看相关信息；
@@ -37,13 +37,15 @@ https://www.espros.com/downloads/09_Application_notes/AN02_Optical_Power_Calcula
 - 光源的LENS的透光效率（无量纲）：可以通过模组相关的datasheet找到该参数；
 - 光源所照射出来的光斑面积（m2）：几何光学的计算问题，涉及emitter的FOV以及被测物体的距离等信息；
 
+![Eeo](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data2/Eeo.png)
+
 可以结合excel文件了解更详细的求解过程。
 
 ![Eeo_table](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data2/Eeo_table.png)
 
-## Part #2 “sensor接受到的反射光照功率密度”由如下公式计算：
+---
 
-![Epixel](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data2/Epixel.png)
+## Part #2 “sensor接受到的反射光照功率密度”由如下公式计算：
 
 包括了以下几个基本项：
 •	物体接受到的光照功率密度（单位W/m2）：在Part #1中已经计算出来；
@@ -52,6 +54,8 @@ https://www.espros.com/downloads/09_Application_notes/AN02_Optical_Power_Calcula
 •	pixel所对应在物体上的面积（单位m2）：几何光学计算问题，这里结合了sensor镜头的FOV，sensor阵列的行数与列数，拍摄物体的距离等信息进行计算；
 •	pixel的面积：（单位m2）：通过sensor的datasheet得知；
 •	sensor的LENS的透光效率（无量纲）：可以通过模组相关的datasheet找到该参数；
+
+![Epixel](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data2/Epixel.png)
 
 同样的，可以结合excel文件了解更详细的求解过程：
 
