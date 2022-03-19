@@ -44,10 +44,10 @@ https://uk.investing.com/analysis/nanoco-group-making-good-sense-200492932
 
 ## IMEC
 其实在ST之前，IMEC在更多的大会上发表过关于QD Image Sensor的研究文章，不过可能IMEC还是更偏研究所性质，其产业化没有ST的动作那么快。IMEC于2021年IISW以及2020年IEDM上的都有关于QD image sensor的文章发表：
-<Detailed Characterization of SWIR-sensitive Colloidal Quantum Dot Image Sensors>
+"Detailed Characterization of SWIR-sensitive Colloidal Quantum Dot Image Sensors"
 (https://imagesensors.org/Past%20Workshops/2021%20Workshop/2021%20Papers/R40.pdf)
 
-<Imaging in Short-Wave Infrared with 1.82 μm Pixel Pitch Quantum Dot Image Sensor>
+"Imaging in Short-Wave Infrared with 1.82 μm Pixel Pitch Quantum Dot Image Sensor"
 
 
 ![IMEC_quantumDot](https://raw.githubusercontent.com/betterCallChen/imageData/main/Figures/data1/IMEC_quantumDot.png)
